@@ -1,0 +1,60 @@
+@import "../../../styles.scss";
+
+.home-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+  padding: 0 1rem;
+  align-items: center;
+
+  @include breakpoint(md) {
+    flex-direction: row;
+    text-align: start;
+    margin: 0;
+  }
+
+  .header {
+    color: $font-color;
+
+    &-links {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      @include breakpoint(md) {
+        justify-content: start;
+      }
+
+      .link-container {
+        background-color: $font-color;
+        padding: 1rem;
+        border-radius: $borderRadius;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+        padding-right: 1rem;
+      }
+      p {
+        padding-left: 1rem;
+      }
+    }
+    .title {
+      font-size: 2rem;
+    }
+    .subtitle {
+      font-size: 5rem;
+    }
+  }
+
+  .picture {
+    width: 100%;
+    @include breakpoint(md) {
+      width: 900px;
+    }
+  }
+}
