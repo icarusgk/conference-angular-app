@@ -21,7 +21,7 @@ $headerHeight: 100px;
 
 @mixin breakpoint($point) {
   @if $point == md {
-    @media (min-width: 48em) {
+    @media (min-width: 50.625em) {
       @content;
     }
   }
@@ -29,7 +29,7 @@ $headerHeight: 100px;
 
 
 // Styles globally
-* {
+* :not(mat-icon) {
   font-family: $font;
   margin: 0;
   box-sizing: border-box;

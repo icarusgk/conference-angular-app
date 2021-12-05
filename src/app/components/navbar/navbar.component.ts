@@ -13,7 +13,11 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     window.addEventListener('resize', () => {
       this.width = window.innerWidth;
-    })
+    });
+  }
+
+  handleMenu() {
+    this.menuOpen = !this.menuOpen;
   }
 
 }

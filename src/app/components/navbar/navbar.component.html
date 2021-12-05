@@ -4,7 +4,7 @@
       <img src="../../../assets/logo.svg" />
     </a>
 
-    <nav [ngClass]="width < 768 && menuOpen ? 'header-content-nav is-menu' : 'header-content-nav'">
+    <nav [ngClass]="width < 1000 && menuOpen ? 'header-content-nav is-menu' : 'header-content-nav'">
 
       <ul>
         <li>
@@ -16,16 +16,21 @@
       </ul>
 
       <div class="buttons">
-        <input type="text" name="search" id="search-box" autocomplete="off">
-        <a href="">Register</a>
+        <div class="search-box">
+          <mat-icon aria-hidden="false" aria-label="Search icon" class="search-icon">search</mat-icon>
+          <input type="text" name="search" id="search-input" autocomplete="off" placeholder="Search">
+        </div>
         <a href="">Login</a>
       </div>
 
-      <div class="header-content-toggle">
-        <!-- Buttons -->
-      </div>
-
     </nav>
+
+    <div class="header-content-toggle">
+      <!-- Buttons -->
+      <mat-icon aria-hidden="false" aria-label="menu icon" (click)="handleMenu()">
+        {{menuOpen ? 'close' : 'menu'}}
+      </mat-icon>
+    </div>
 
   </div>
 </header>
