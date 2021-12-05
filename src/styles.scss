@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap');
+
+// Font
+$font: 'Oswald', sans-serif;
+
+// Colors
+$page-background:  rgb(255, 255, 255);
+$font-color:  rgb(36, 24, 82);
+$navbar-background:  rgb(11, 90, 251);
+
+// Spacing
+$spacing-md: 16px;
+$spacing-lg: 32px;
+
+// Border Radius
+$borderRadius: 14px;
+
+// Header Height
+$headerHeight: 100px;
+
+@mixin breakpoint($point) {
+  @if $point == md {
+    @media (min-width: 48em) {
+      @content;
+    }
+  }
+}
+
+
+// Styles globally
+* {
+  font-family: $font;
+  margin: 0;
+  box-sizing: border-box;
+}
