@@ -30,15 +30,18 @@
       }
 
       .link-container {
+        cursor: pointer;
         background-color: $font-color;
         padding: 1rem;
         border-radius: $borderRadius;
+
+        span {
+          color: white;
+          text-decoration: none;
+          padding-right: 1rem;
+        }
       }
-      a {
-        color: white;
-        text-decoration: none;
-        padding-right: 1rem;
-      }
+
       p {
         padding-left: 1rem;
       }

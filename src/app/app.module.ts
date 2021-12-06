@@ -17,6 +17,7 @@ import { ConferencesComponent } from './components/conferences/conferences.compo
     AppRoutingModule,
     MatIconModule,
     RouterModule.forRoot([
+      { path: '', component: HomeComponent},
       { path: 'about', component: AboutComponent },
       { path: 'conferences', component: ConferencesComponent}
     ]),
