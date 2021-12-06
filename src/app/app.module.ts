@@ -6,19 +6,22 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MatIconModule } from '@angular/material/icon';
 import { HomeComponent } from './components/home/home.component';
+import { RouterModule } from '@angular/router';
+import { AboutComponent } from './components/about/about.component';
+import { ConferencesComponent } from './components/conferences/conferences.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    HomeComponent
-  ],
+  declarations: [AppComponent, NavbarComponent, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatIconModule
+    MatIconModule,
+    RouterModule.forRoot([
+      { path: 'about', component: AboutComponent },
+      { path: 'conferences', component: ConferencesComponent}
+    ]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
