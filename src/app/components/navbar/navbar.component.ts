@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   width = window.innerWidth;
+  status = localStorage.getItem('logged in');
   menuOpen = false;
 
   ngOnInit(): void {
@@ -20,4 +21,13 @@ export class NavbarComponent implements OnInit {
     this.menuOpen = !this.menuOpen;
   }
 
+  logIn() {
+    if (!localStorage.getItem('logged in')) {
+      localStorage.setItem('logged in', 'true');
+    }
+  }
+
+  logOut() {
+    localStorage.removeItem('logged in');
+  }
 }

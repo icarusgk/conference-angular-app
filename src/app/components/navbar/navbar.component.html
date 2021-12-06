@@ -20,7 +20,8 @@
           <mat-icon aria-hidden="false" aria-label="Search icon" class="search-icon">search</mat-icon>
           <input type="text" name="search" id="search-input" autocomplete="off" placeholder="Search">
         </div>
-        <a href="">Login</a>
+        <a *ngIf="!status" (click)="logIn()" href="/">Log In</a>
+        <a *ngIf="status" (click)="logOut()" href="/">Log Out</a>
       </div>
 
     </nav>
